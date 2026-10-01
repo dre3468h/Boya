@@ -95,7 +95,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ language }) => {
                 <div className="flex items-center gap-3">
                     <CheckCircle2 size={18} className="text-[#b91c1c]" />
                     <span className="text-xs font-bold uppercase tracking-widest text-ink font-mono">
-                      {language === 'en' ? 'University Research Grants Eligible' : language === 'cn' ? '支持国家社科及高校课题报销' : '支持國家社科及高校課題報銷'}
+                      {language === 'en' ? 'COPE Publication Ethics Compliant' : language === 'cn' ? '严格恪守 COPE 国际出版伦理' : '嚴格恪守 COPE 國際出版倫理'}
                     </span>
                 </div>
             </div>

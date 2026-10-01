@@ -9,8 +9,8 @@ interface DisclaimerProps {
 const Disclaimer: React.FC<DisclaimerProps> = ({ language }) => {
   const content = {
     zh: {
-      title: '學術出版倫理與課題經費報銷規範',
-      subtitle: 'COMMITTEE ON PUBLICATION ETHICS (COPE) & RESEARCH GRANT INVOICING',
+      title: '學術出版倫理與服務規範守則',
+      subtitle: 'COMMITTEE ON PUBLICATION ETHICS (COPE) & COMPLIANCE GUIDELINES',
       notice_box: {
         headline: '【學術誠信與出版責任聲明】',
         text: '期刊投稿服務旨在協助學者克服繁雜的語言與行政流程，不替代作者之學術研究責任。博雅文研協助處理期刊格式 (APA 7th, Chicago, MLA, Harvard 等)、投稿信 (Cover Letter) 撰寫、期刊線上投稿系統 (ScholarOne, Editorial Manager 等) 註冊與文件上傳等行政與語言相關細節；論文研究數據、學術發現、作者資訊、審稿意見實質答辯及期刊最終錄用決策，仍以作者與期刊編輯部為準。嚴禁代寫，恪守 COPE 國際出版倫理。'
@@ -22,9 +22,9 @@ const Disclaimer: React.FC<DisclaimerProps> = ({ language }) => {
           text: '博雅文研學術編修嚴格恪守國際出版倫理委員會 (COPE) 規範。我們專注於人文社科學術英文用語潤飾、質性敘事修辭、論證邏輯梳理及投稿行政協助，絕不提供代寫、數據捏造 (Fabrication) 或竄改 (Falsification) 等任何危害學術誠信之違法行為。作者需對自身研究之原創性與學術真實性負完全法律與學術責任。'
         },
         {
-          title: '課題經費報銷與發票開立說明',
+          title: '服務合約與明細收據說明',
           icon: <FileCheck size={24} />,
-          text: '博雅文研完全支援中國大陸高校（985/211、雙一流院校）、社科院各研究所及香港各大學 (HKU, CUHK, HKUST 等) 科研課題經費報銷。可開立增值稅普通發票或專用發票（開票類目可開「學術編修費」、「論文翻譯費」、「諮詢服務費」等），支援公對公轉賬、公務卡及香港大學採購卡 (P-Card) 支付。'
+          text: '博雅文研提供正規服務合約與明細項目收據（可載明「學術語言編修服務」、「期刊投稿技術諮詢」等正規項目）。支持多幣種結算、銀行公對公電匯、國際信用卡及主流在線支付，保障財務透明合規。'
         },
         {
           title: '智慧財產權與著作權歸屬',
@@ -44,8 +44,8 @@ const Disclaimer: React.FC<DisclaimerProps> = ({ language }) => {
       ]
     },
     cn: {
-      title: '学术出版伦理与课题经费报销规范',
-      subtitle: 'COMMITTEE ON PUBLICATION ETHICS (COPE) & RESEARCH GRANT INVOICING',
+      title: '学术出版伦理与服务规范守则',
+      subtitle: 'COMMITTEE ON PUBLICATION ETHICS (COPE) & COMPLIANCE GUIDELINES',
       notice_box: {
         headline: '【学术诚信与出版责任声明】',
         text: '期刊投稿服务旨在协助学者克服繁琐的语言与行政流程，不替代作者之学术研究责任。博雅文研协助处理期刊格式 (APA 7th, Chicago, MLA, Harvard 等)、投稿信 (Cover Letter) 撰写、期刊线上投稿系统 (ScholarOne, Editorial Manager 等) 注册与文件上传等行政与语言相关细节；论文研究数据、学术发现、作者信息、审稿意见实质答辩及期刊最终录用决策，仍以作者与期刊编辑部为准。严禁代写代发，恪守 COPE 国际出版伦理。'
@@ -57,9 +57,9 @@ const Disclaimer: React.FC<DisclaimerProps> = ({ language }) => {
           text: '博雅文研学术编修严格恪守国际出版伦理委员会 (COPE) 规范。我们专注于人文社科学术英文用语润饰、质性叙事修辞、论证逻辑梳理及投稿行政协助，绝不提供代写代发、数据捏造 (Fabrication) 或篡改 (Falsification) 等任何危害学术诚信之行为。作者需对自身研究之原创性与学术真实性负完全法律与学术责任。'
         },
         {
-          title: '课题经费报销与发票开具说明',
+          title: '服务合同与明细收据说明',
           icon: <FileCheck size={24} />,
-          text: '博雅文研完全支持中国大陆高校（985/211、双一流院校）、社科院各研究所及香港各大学科研课题经费报销。可开具增值税普通发票或专用发票（开票类目可开“学术编修费”、“论文翻译费”、“学术咨询费”等），支持公对公转账、公务卡及香港大学采购卡 (P-Card) 支付。'
+          text: '博雅文研提供正规服务合同与明细项目收据（可载明“学术语言润色服务”、“期刊投稿技术咨询”等正规项目）。支持多币种结算、企业银行电汇、国际信用卡及主流在线支付，保障财务清晰规范。'
         },
         {
           title: '知识产权与著作权归属',
@@ -79,8 +79,8 @@ const Disclaimer: React.FC<DisclaimerProps> = ({ language }) => {
       ]
     },
     en: {
-      title: 'Publication Ethics & University Grant Invoicing Policies',
-      subtitle: 'COMMITTEE ON PUBLICATION ETHICS (COPE) & RESEARCH GRANT INVOICING',
+      title: 'Publication Ethics & Compliance Guidelines',
+      subtitle: 'COMMITTEE ON PUBLICATION ETHICS (COPE) & COMPLIANCE GUIDELINES',
       notice_box: {
         headline: '[EDITORIAL ETHICS & AUTHOR RESPONSIBILITY NOTICE]',
         text: 'Journal submission assistance is designed to relieve researchers of bureaucratic administrative procedures and linguistic barriers; it never replaces the author\'s primary scientific and scholarly responsibility. Boya assists with Guide for Authors compliance, cover letter drafting, ScholarOne / Editorial Manager portal registration, and multi-file uploading. Research data, theoretical claims, reviewer rebuttals, and final editorial decisions strictly remain the author\'s and journal\'s purview. Ghostwriting is strictly prohibited under COPE ethical guidelines.'
@@ -92,9 +92,9 @@ const Disclaimer: React.FC<DisclaimerProps> = ({ language }) => {
           text: 'Boya Academic Editorial strictly abides by the Committee on Publication Ethics (COPE). We specialize in academic English editing, citation formatting (APA, Chicago, Harvard), and submission logistics. We strictly oppose ghostwriting, paper mills, data fabrication, or academic misconduct. Authors remain solely responsible for the scholarly originality of their manuscripts.'
         },
         {
-          title: 'University Research Grant Invoicing & VAT Compliance',
+          title: 'Service Agreement & Invoicing Receipts',
           icon: <FileCheck size={24} />,
-          text: 'We provide full invoicing support for Chinese university grants (NSSFC, Ministry of Education) and Hong Kong RGC (GRF/ECS) funds. We issue official VAT invoices (fapiao) under categories such as "Academic Editing" and "Academic Translation", supporting corporate bank wire transfers, university Purchasing Cards (P-Cards), and institutional billing agreements.'
+          text: 'Boya provides official service agreements and detailed itemized receipts (e.g., "Academic Editing Services", "Journal Submission Technical Advisory"). We support corporate wire transfers, multi-currency settlements, international credit cards, and online billing systems for transparent accounting.'
         },
         {
           title: 'Intellectual Property & Complete Author Ownership',

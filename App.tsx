@@ -357,7 +357,7 @@ const App: React.FC = () => {
                 { num: "18", suffix: "+", label: "Years Experience" },
                 { num: "35k", suffix: "+", label: "Social Science Papers" },
                 { num: "93.8", suffix: "%", label: "SSCI/A&HCI Acceptance" },
-                { num: "100", suffix: "%", label: "Invoice & Grant Support" }
+                { num: "100", suffix: "%", label: "Legal NDA Protection" }
               ].map((stat, i) => (
                 <div key={i}>
                   <div className="text-3xl md:text-4xl font-black text-ink font-display">
@@ -451,25 +451,31 @@ const App: React.FC = () => {
             <div className="flex flex-col gap-6">
               {[
                 { 
-                  name: "Prof. Z. H. Lu (盧教授)", 
-                  role: "Peking University • School of Government (北京大學政府管理學院)", 
+                  name: language === 'en' ? "Anonymous Professor (Doctoral Supervisor)" : (language === 'cn' ? "匿名学者 (教授 / 博导)" : "匿名學者 (教授 / 博導)"), 
+                  role: language === 'en' ? "Tier-1 985 University • School of Government (Beijing)" : (language === 'cn' ? "华北某 985 高校 • 政府管理学院" : "華北某 985 高校 • 政府管理學院"), 
                   text: language === 'en'
                     ? "Our empirical governance paper was commended by the Editor of Governance (SSCI Q1) for natural academic phrasing. Boya's Oxford editorial team captured our institutional insights without losing qualitative nuance."
-                    : "我們有關基層數字治理的實證論文經博雅文研牛津社科主編深度編修後，順利通過 Governance (SSCI Q1) 的同行評審。主編信中特別讚揚語言自然嚴謹，完全展現了中國經驗研究的國際對話價值！"
+                    : (language === 'cn'
+                      ? "我们有关基层数字治理的实证论文经博雅文研牛津社科主编深度编修后，顺利通过 Governance (SSCI Q1) 的同行评审。主编信中特别赞扬语言自然严谨，完全展现了中国经验研究的国际对话价值！"
+                      : "我們有關基層數字治理的實證論文經博雅文研牛津社科主編深度編修後，順利通過 Governance (SSCI Q1) 的同行評審。主編信中特別讚揚語言自然嚴謹，完全展現了中國經驗研究的國際對話價值！")
                 },
                 { 
-                  name: "Dr. K. Y. Wong (黃博士)", 
-                  role: "The University of Hong Kong • Faculty of Social Sciences (香港大學社會科學學院)", 
+                  name: language === 'en' ? "Anonymous Assistant Professor" : (language === 'cn' ? "匿名学者 (助理教授)" : "匿名學者 (助理教授)"), 
+                  role: language === 'en' ? "Public Research University • Faculty of Social Sciences (Hong Kong)" : (language === 'cn' ? "香港某公立研究型大学 • 社会科学学院" : "香港某公立研究型大學 • 社會科學學院"), 
                   text: language === 'en'
-                    ? "SSCI formatting with Chicago author-date styles and thick qualitative interview quotations is very demanding. Boya managed the entire formatting and ScholarOne portal upload smoothly, covered by our HKU faculty grant."
-                    : "SSCI 期刊對芝加哥引註體例與質性訪談引語排版要求極高。博雅文研協助處理全篇格式排版與 ScholarOne 系統代投，替課題組節省了大量繁重行政工作，且完全符合港大研究經費報銷手續。"
+                    ? "SSCI formatting with Chicago author-date styles and thick qualitative interview quotations is very demanding. Boya managed the entire formatting and ScholarOne portal upload smoothly, saving our research team countless hours."
+                    : (language === 'cn'
+                      ? "SSCI 期刊对芝加哥引注体例与质性访谈引语排版要求极高。博雅文研协助处理全篇格式排版与 ScholarOne 系统代投，替课题组节省了大量繁重行政工作，配合极度顺畅。"
+                      : "SSCI 期刊對芝加哥引註體例與質性訪談引語排版要求極高。博雅文研協助處理全篇格式排版與 ScholarOne 系統代投，替課題組節省了大量繁重行政工作，配合極度順暢。")
                 },
                 { 
-                  name: "Prof. S. Q. Chen (陳研究員)", 
-                  role: "CASS / Tsinghua University • Sociology (清華大學社會學系 / 社科院)", 
+                  name: language === 'en' ? "Anonymous Senior Researcher" : (language === 'cn' ? "匿名青年学者 (副研究员)" : "匿名青年學者 (副研究員)"), 
+                  role: language === 'en' ? "Top Sociology Department / National Think Tank" : (language === 'cn' ? "顶尖高校社会学系 / 重点智库机构" : "頂尖高校社會學系 / 重點智庫機構"), 
                   text: language === 'en'
                     ? "During our Major Revision for British Journal of Sociology, Boya polished our 14-page Point-by-point Rebuttal letter with immense academic courtesy. The paper was accepted within three weeks."
-                    : "在收到 British Journal of Sociology 的 Major Revision 後，博雅文研主編協助我們潤色了長達14頁的逐點答辯信 (Response to Reviewers)，學術禮貌與論證力度恰到好處，返修後三週內即獲正式錄用！"
+                    : (language === 'cn'
+                      ? "在收到 British Journal of Sociology 的 Major Revision 后，博雅文研主编协助我们润色了长达14页的逐点答辩信 (Response to Reviewers)，学术礼貌与论证力度恰到好处，返修后三周内即获正式录用！"
+                      : "在收到 British Journal of Sociology 的 Major Revision 後，博雅文研主編協助我們潤色了長達14頁的逐點答辯信 (Response to Reviewers)，學術禮貌與論證力度恰到好處，返修後三週內即獲正式錄用！")
                 }
               ].map((tr, i) => (
                 <div key={i} className="bg-paper p-8 border border-ink relative reveal group hover:shadow-[5px_5px_0px_0px_var(--color-ink)] transition-shadow">
@@ -482,7 +488,7 @@ const App: React.FC = () => {
                   <p className="text-ink mb-6 leading-relaxed text-sm font-medium">"{tr.text}"</p>
                   <div className="flex items-center gap-4 pt-4 border-t border-ink-light/20">
                     <div className="w-9 h-9 bg-ink flex items-center justify-center font-bold text-paper text-xs">
-                      {tr.name.charAt(0)}
+                      {i + 1}
                     </div>
                     <div>
                       <div className="font-bold text-sm text-ink">{tr.name}</div>

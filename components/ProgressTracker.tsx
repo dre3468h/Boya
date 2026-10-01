@@ -530,7 +530,7 @@ const ProgressTracker: React.FC<ProgressTrackerProps> = ({ language = 'zh' }) =>
                       <label className="block text-xs font-bold uppercase text-stone-700 mb-2 tracking-wider">
                         {language === 'en' 
                           ? 'Submit Author Instruction / Additional Journal Guideline'
-                          : '提交作者修改反饋或補充目標期刊要求 (支持國家社科基金/教育部課題編號標註)'
+                          : '提交作者修改反饋或補充目標期刊要求 (可備註期刊引註規範或特殊排版要求)'
                         }
                       </label>
                       <div className="flex flex-col sm:flex-row gap-2">

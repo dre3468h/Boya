@@ -39,19 +39,19 @@ const Header: React.FC<HeaderProps> = ({
       "英美頂尖名校社科母語主編 • 提高 SSCI / A&HCI 期刊錄用率",
       "專注人文社科論文 • APA / Chicago / Harvard 規範全文格式排版",
       "全套期刊代投服務 • Cover Letter 撰寫 • ScholarOne 系統代辦",
-      "支持國家社科基金、教育部課題及香港 RGC 經費報銷與發票開立"
+      "全流程投稿代理保障 • 先收訂金、錄用才收全額 • 恪守 COPE 出版倫理"
     ],
     cn: [
       "英美顶尖名校社科母语主编 • 提高 SSCI / A&HCI 期刊录用率",
       "专注人文社科论文 • APA / Chicago / Harvard 规范全文格式排版",
       "全套期刊代投服务 • Cover Letter 撰写 • ScholarOne 系统代办",
-      "支持国家社科基金、教育部课题及香港 RGC 经费报销与发票开具"
+      "全流程投稿代理保障 • 先收定金、录用才收全额 • 恪守 COPE 出版伦理"
     ],
     en: [
       "Native Social Sciences Doctoral Editors • Boost SSCI & A&HCI Acceptance",
       "Specialized in Humanities & Social Sciences • APA, Chicago & Harvard Styles",
       "End-to-End Submission Management: Custom Cover Letter & Portal Upload",
-      "Official Invoicing for Chinese University Grants & Hong Kong RGC Funding"
+      "Full-Process Submission Agent: Low Deposit, Final Fee Due Only Upon Official Acceptance"
     ]
   };
 
@@ -403,7 +403,7 @@ const Header: React.FC<HeaderProps> = ({
             <div className="pt-4 border-t border-ink/20 text-[11px] text-ink-light font-mono space-y-1">
               <p>Email: editorial@boya-academic.org</p>
               <p>Tel / WhatsApp: +852 55849939</p>
-              <p>支持港幣 / 人民幣 / 美元結算及大學經費發票</p>
+              <p>支持港幣 / 人民幣 / 美元多幣種結算與正規服務收據</p>
             </div>
           </div>
         </div>

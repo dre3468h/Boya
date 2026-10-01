@@ -45,10 +45,11 @@ const QuoteCalculator: React.FC<QuoteCalculatorProps> = ({ language }) => {
     setEstimatedPrice(price);
 
     // Submission Package Rates in HKD
-    let pkgBase = 3800;
+    let pkgBase = 4800;
+    if (selectedPackage === 'pkg_full_agent') pkgBase = 4500; // Administrative deposit
+    if (selectedPackage === 'pkg_conception') pkgBase = 3200; // Topic Scoping
     if (selectedPackage === 'pkg_full') pkgBase = 4800;
     if (selectedPackage === 'pkg_formatting') pkgBase = 1800;
-    if (selectedPackage === 'pkg_cover_letter') pkgBase = 1500;
     if (selectedPackage === 'pkg_response') pkgBase = 2800;
 
     const discountRate = includeEditingCombo ? 0.15 : 0;
@@ -163,15 +164,15 @@ const QuoteCalculator: React.FC<QuoteCalculatorProps> = ({ language }) => {
                 <div className="p-3 bg-stone-50 border border-ink/20 text-xs text-stone-700 space-y-1.5 font-mono">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-emerald-700" />
-                    <span>{language === 'en' ? 'Native Social Sciences PhD Dual Review' : '英美名校人文社科博士主編雙階段二審'}</span>
+                    <span>{language === 'en' ? 'Native Social Sciences PhD Dual Review' : (language === 'cn' ? '英美名校人文社科博士主编双阶段二审' : '英美名校人文社科博士主編雙階段二審')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-emerald-700" />
-                    <span>{language === 'en' ? 'Support for Mainland & HK University Grant Invoices' : '開具增值稅普通/專用發票，支持大學經費公對公報銷'}</span>
+                    <span>{language === 'en' ? 'Official Service Agreements & Detailed Invoicing Receipts' : (language === 'cn' ? '提供正规技术服务合同与明细收据，支持多币种结算' : '提供正規技術服務合約與明細收據，支持多幣種結算')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-emerald-700" />
-                    <span>{language === 'en' ? 'Official Certificate of Editing Recognized by Springer/Taylor/Routledge' : '隨稿附贈國際期刊認可之《學術英文編修證明》'}</span>
+                    <span>{language === 'en' ? 'Official Certificate of Editing Recognized by Springer/Taylor/Routledge' : (language === 'cn' ? '随稿附赠国际期刊认可之《学术英文润色证明》' : '隨稿附贈國際期刊認可之《學術英文編修證明》')}</span>
                   </div>
                 </div>
               </div>
@@ -225,10 +226,51 @@ const QuoteCalculator: React.FC<QuoteCalculatorProps> = ({ language }) => {
                   <label className="block text-xs font-bold uppercase text-ink-light mb-2">{t.labels.submission_package}</label>
                   <div className="space-y-2.5">
                     {[
-                      { id: 'pkg_full', name: t.packages.pkg_full, desc: '涵蓋 APA/Chicago 引註排版、Cover Letter 撰寫、ScholarOne 系統代投、檔案上傳與進度追蹤' },
-                      { id: 'pkg_formatting', name: t.packages.pkg_formatting, desc: '針對 Target Journal Guide for Authors 嚴格排版（字型、邊距、質性引文縮排、參考文獻交叉核對）' },
-                      { id: 'pkg_cover_letter', name: t.packages.pkg_cover_letter, desc: '由英美社科主編量身撰寫直指研究創新點 (Theoretical Novelty) 的主編推薦信' },
-                      { id: 'pkg_response', name: t.packages.pkg_response, desc: '針對同行評審意見 (R&R) 提供逐點答辯信 (Point-by-point Response) 語言潤色與二審把關' }
+                      { 
+                        id: 'pkg_full_agent', 
+                        name: t.packages.pkg_full_agent, 
+                        desc: language === 'en' 
+                          ? 'Flagship: Low upfront deposit for formatting and submission; full fee due ONLY upon official acceptance (Accept), tiered by JCR journal quartiles.'
+                          : (language === 'cn'
+                            ? '【旗舰保障】先收基础排版与系统代投定金，正式录用 Accept 才收全额尾款；按 JCR 期刊分区阶梯定价，不录用不收尾款。'
+                            : '【旗艦保障】先收基礎排版與系統代投訂金，正式錄用 Accept 才收全額尾款；按 JCR 期刊分區階梯定價，不錄用不收尾款。')
+                      },
+                      { 
+                        id: 'pkg_conception', 
+                        name: t.packages.pkg_conception, 
+                        desc: language === 'en'
+                          ? '1-on-1 consultation with native doctoral editor to review recent 3-5 years SSCI debates and construct theoretical analytical frameworks.'
+                          : (language === 'cn'
+                            ? '由英美名校社科主编梳理近3年 SSCI 核心文献，指导概念提炼与分析框架建构，从源头避免选题陈旧 Desk Reject。'
+                            : '由英美名校社科主編梳理近3年 SSCI 核心文獻，指導概念提煉與分析框架建構，從源頭避免選題陳舊 Desk Reject。')
+                      },
+                      { 
+                        id: 'pkg_full', 
+                        name: t.packages.pkg_full, 
+                        desc: language === 'en'
+                          ? 'Guide for Authors formatting, custom Cover Letter, ScholarOne / Editorial Manager submission, and portal tracking.'
+                          : (language === 'cn'
+                            ? '涵盖 APA/Chicago 引注排版、Cover Letter 撰写、ScholarOne 系统代投、档案上传与进度追踪。'
+                            : '涵蓋 APA/Chicago 引註排版、Cover Letter 撰寫、ScholarOne 系統代投、檔案上傳與進度追蹤。')
+                      },
+                      { 
+                        id: 'pkg_formatting', 
+                        name: t.packages.pkg_formatting, 
+                        desc: language === 'en'
+                          ? 'Target journal formatting (APA 7th, Chicago, MLA, Harvard), qualitative block quotes indent, reference cross-checking.'
+                          : (language === 'cn'
+                            ? '针对 Target Journal Guide for Authors 严格排版（字号、页边距、访谈引文缩进、参考文献交叉核对）。'
+                            : '針對 Target Journal Guide for Authors 嚴格排版（字型、邊距、訪談引文縮排、參考文獻交叉核對）。')
+                      },
+                      { 
+                        id: 'pkg_response', 
+                        name: t.packages.pkg_response, 
+                        desc: language === 'en'
+                          ? 'Professional linguistic and academic tone refinement for Point-by-point Response to Reviewers during R&R revisions.'
+                          : (language === 'cn'
+                            ? '针对同行评审意见 (Major/Minor Revision) 提供逐点答辩信 (Point-by-point Response) 语言润色与二审把关。'
+                            : '針對同行評審意見 (Major/Minor Revision) 提供逐點答辯信 (Point-by-point Response) 語言潤色與二審把關。')
+                      }
                     ].map(pkg => (
                       <div 
                         key={pkg.id}
